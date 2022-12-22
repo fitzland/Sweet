@@ -8,7 +8,7 @@ stage {
 
 /* WIDGETS */
 /* Buttons */
-.button, .app-folder-dialog .edit-folder-button {
+.button, .app-folder-dialog .edit-folder-button, .quick-settings-system-item .icon-button {
   color: #C3C7D1;
   background-color: #2a3846;
   box-shadow: none;
@@ -18,27 +18,27 @@ stage {
   border: 1px solid #1c262f;
   border-radius: 6px;
   padding: 4px 32px; }
-  .button:focus, .app-folder-dialog .edit-folder-button:focus {
+  .button:focus, .app-folder-dialog .edit-folder-button:focus, .quick-settings-system-item .icon-button:focus {
     background-color: #314353;
     color: #eeeff2;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black;
-    box-shadow: none;
+    box-shadow: none !important;
     border: 1px solid #1c262f; }
-  .button:insensitive, .app-folder-dialog .edit-folder-button:insensitive {
+  .button:insensitive, .app-folder-dialog .edit-folder-button:insensitive, .quick-settings-system-item .icon-button:insensitive {
     color: #737b85;
     background-color: rgba(52, 63, 73, 0.66);
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
     border: none;
     text-shadow: none;
     icon-shadow: none; }
-  .button:active, .app-folder-dialog .edit-folder-button:active {
+  .button:active, .app-folder-dialog .edit-folder-button:active, .quick-settings-system-item .icon-button:active {
     color: #00e8b7;
     background-color: rgba(34, 46, 57, 0.95);
     border: 1px solid #1c262f;
     text-shadow: none;
     icon-shadow: none; }
-  .button:hover, .app-folder-dialog .edit-folder-button:hover {
+  .button:hover, .app-folder-dialog .edit-folder-button:hover, .quick-settings-system-item .icon-button:hover {
     background-color: #2f404f;
     color: #eeeff2;
     border: 1px solid #1c262f;
@@ -71,14 +71,14 @@ stage {
     color: #eeeff2;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black;
-    box-shadow: none;
+    box-shadow: none !important;
     border: 1px solid #1c262f; }
     .modal-dialog-linked-button:focus:hover {
       background-color: #314353;
       color: #eeeff2;
       text-shadow: 0 1px black;
       icon-shadow: 0 1px black;
-      box-shadow: none;
+      box-shadow: none !important;
       border: 1px solid #1c262f; }
   .modal-dialog-linked-button:hover {
     background-color: #2f404f;
@@ -143,26 +143,19 @@ StScrollBar {
 
 /* Slider */
 .slider {
-  height: 1em;
-  color: #eeeff2;
-  border-color: black;
-  -slider-height: 0.1em;
-  -slider-background-color: #394d5f;
-  -slider-border-color: black;
-  -slider-active-background-color: #00e8c6;
-  -slider-active-border-color: #84ff39;
-  -slider-border-width: 0;
-  -slider-handle-radius: 6px;
-  -barlevel-height: 0.1em;
-  -barlevel-background-color: #394d5f;
-  -barlevel-border-color: black;
+  color: #C3C7D1;
+  -barlevel-height: 2px;
+  -barlevel-background-color: rgba(195, 199, 209, 0.2);
+  -barlevel-border-width: 2px;
+  -barlevel-border-color: transparent;
   -barlevel-active-background-color: #00e8c6;
-  -barlevel-active-border-color: #84ff39;
-  -barlevel-border-width: 0;
-  -barlevel-handle-radius: 6px;
-  -barlevel-overdrive-color: #00e8c6;
+  -barlevel-active-border-color: transparent;
+  -barlevel-overdrive-color: #9b1b32;
   -barlevel-overdrive-border-color: transparent;
-  -barlevel-overdrive-separator-width: 0px; }
+  -barlevel-overdrive-separator-width: 0px;
+  -slider-handle-radius: 8px;
+  -slider-handle-border-width: 0;
+  -slider-handle-border-color: transparent; }
 
 /* Check Boxes */
 .check-box StBoxLayout {
@@ -510,7 +503,7 @@ StScrollBar {
       border-radius: 0 0 6px 6px; }
     .popup-sub-menu .popup-menu-item:active, .popup-sub-menu .popup-menu-item.selected, .popup-sub-menu .popup-menu-item:hover, .popup-sub-menu .popup-menu-item:focus {
       background-color: #334556 !important;
-      color: #C3C7D1; }
+      color: #C3C7D1 !important; }
 
 .popup-menu-content {
   padding: 6px;
@@ -527,7 +520,7 @@ StScrollBar {
     padding-right: 6px; }
   .popup-menu-item:active, .popup-menu-item.selected, .popup-menu-item:hover, .popup-menu-item:focus {
     background-color: #2d3d4c !important;
-    color: #C3C7D1; }
+    color: #C3C7D1 !important; }
   .popup-menu-item:checked {
     background-gradient-start: #00e8b7 !important;
     background-gradient-end: #00e8b7 !important;
@@ -796,7 +789,7 @@ StScrollBar {
     #panel.solid .popup-menu-arrow {
       icon-shadow: none; }
 
-.world-clocks-button, .world-clocks-button .calendar, .weather-button, .weather-button .calendar, .events-button, .events-button .calendar {
+.calendar, .world-clocks-button, .weather-button, .events-button {
   background: transparent;
   border: none;
   color: #C3C7D1;
@@ -899,7 +892,8 @@ StScrollBar {
   padding: 0.1em;
   margin: 2px;
   border-radius: 99px;
-  color: #C3C7D1; }
+  color: #C3C7D1;
+  background-gradient-direction: none; }
   .calendar-day-base:hover, .calendar-day-base:focus {
     background-color: #394d5f;
     box-shadow: none; }
@@ -1387,6 +1381,8 @@ StScrollBar {
 .app-folder-dialog {
   background-color: #1c262f;
   border: none; }
+  .app-folder-dialog .folder-name-label {
+    color: #C3C7D1; }
   .app-folder-dialog .edit-folder-button {
     padding: 0;
     width: 36px;
@@ -1633,7 +1629,7 @@ StScrollBar {
     color: #eeeff2;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black;
-    box-shadow: none;
+    box-shadow: none !important;
     border: 1px solid #1c262f; }
   .keyboard-key:hover, .keyboard-key:checked {
     background-color: #2f404f;
@@ -1984,6 +1980,70 @@ StScrollBar {
   border: 2px solid grey;
   border-radius: 4px;
   padding: 6px; }
+
+.quick-settings {
+  padding: 14px;
+  border-radius: 12px; }
+  .quick-settings .icon-button, .quick-settings .button {
+    padding: 10.5px; }
+
+.quick-toggle {
+  border-radius: 99px;
+  /* Move padding into the box; this is to allow menu arrows
+     to extend to the border */ }
+  .quick-toggle:checked {
+    background-gradient-start: rgba(0, 232, 183, 0.7) !important;
+    background-gradient-end: rgba(0, 232, 183, 0.7) !important;
+    background-gradient-direction: horizontal;
+    color: white;
+    text-shadow: none; }
+  .quick-toggle > StBoxLayout {
+    spacing: 6px; }
+  .quick-toggle.button {
+    padding: 0; }
+  .quick-toggle > StBoxLayout {
+    padding: 0 12px; }
+  .quick-toggle:ltr > StBoxLayout {
+    padding-left: 15px; }
+  .quick-toggle:rtl > StBoxLayout {
+    padding-right: 15px; }
+  .quick-toggle .quick-toggle-label {
+    font-weight: bold; }
+
+.quick-menu-toggle:ltr > StBoxLayout {
+  padding-right: 0; }
+.quick-menu-toggle:rtl > StBoxLayout {
+  padding-left: 0; }
+.quick-menu-toggle .quick-toggle-arrow {
+  background-color: rgba(195, 199, 209, 0.1);
+  padding: 6px 10.5px; }
+  .quick-menu-toggle .quick-toggle-arrow:ltr {
+    border-radius: 0 99px 99px 0; }
+  .quick-menu-toggle .quick-toggle-arrow:rtl {
+    border-radius: 99px 0 0 99px; }
+
+.quick-toggle-menu {
+  background-color: #24313c;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 12px 18px 0; }
+  .quick-toggle-menu .popup-menu-item > StIcon {
+    -st-icon-style: symbolic; }
+  .quick-toggle-menu .header {
+    spacing-rows: 3px;
+    spacing-columns: 12px;
+    padding-bottom: 12px; }
+    .quick-toggle-menu .header .icon {
+      border-radius: 999px;
+      padding: 9px;
+      background-color: #354859; }
+      .quick-toggle-menu .header .icon.active {
+        background-color: #00e8b7; }
+
+.quick-settings-system-item > StBoxLayout {
+  spacing: 12px; }
+.quick-settings-system-item .icon-button {
+  border-radius: 50px; }
 
 .openweather-current-summarybox,
 .openweather-forecast-icon,
