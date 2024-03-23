@@ -678,13 +678,13 @@ button.suggested-action {
   border: none;
   box-shadow: none;
   color: white;
-  border-radius: 100px;
-  background: linear-gradient(to right, #5797f7 0%, #00dcf4 100%); }
+  border-radius: 8px;
+  background: linear-gradient(to right, #3BE4EA 0%, #1A93ED 100%); }
   .selection-mode button.titlebutton, button.suggested-action.flat {
     box-shadow: none;
     color: white;
-    border-radius: 100px;
-    background: linear-gradient(to right, #5797f7 0%, #00dcf4 100%); }
+    border-radius: 8px;
+    background: linear-gradient(to right, #3BE4EA 0%, #1A93ED 100%); }
   button.suggested-action:hover {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
@@ -788,13 +788,13 @@ button.destructive-action {
   border: none;
   box-shadow: none;
   color: white;
-  border-radius: 100px;
+  border-radius: 8px;
   background: linear-gradient(to right, #ee0979, #ff6a00); }
   button.destructive-action.flat {
     box-shadow: none;
     color: white;
-    border-radius: 100px;
-    background: linear-gradient(to right, #5797f7 0%, #00dcf4 100%); }
+    border-radius: 8px;
+    background: linear-gradient(to right, #3BE4EA 0%, #1A93ED 100%); }
   button.destructive-action:hover {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
@@ -2271,13 +2271,13 @@ GraniteWidgetsWelcome {
     headerbar button.suggested-action {
       box-shadow: none;
       border: none;
-      background-image: linear-gradient(to right, #5797f7 0%, #00dcf4 100%); }
+      background-image: linear-gradient(to right, #3BE4EA 0%, #1A93ED 100%); }
       .titlebar button.suggested-action:disabled, .titlebar button.suggested-action:disabled:backdrop, .titlebar button.suggested-action:backdrop,
       headerbar button.suggested-action:disabled,
       headerbar button.suggested-action:disabled:backdrop,
       headerbar button.suggested-action:backdrop {
         border: none;
-        background-image: linear-gradient(to right, #5797f7 0%, #00dcf4 100%); }
+        background-image: linear-gradient(to right, #3BE4EA 0%, #1A93ED 100%); }
         .titlebar button.suggested-action:disabled:hover, .titlebar button.suggested-action:disabled:active, .titlebar button.suggested-action:disabled:checked, .titlebar button.suggested-action:disabled:backdrop:hover, .titlebar button.suggested-action:disabled:backdrop:active, .titlebar button.suggested-action:disabled:backdrop:checked, .titlebar button.suggested-action:backdrop:hover, .titlebar button.suggested-action:backdrop:active, .titlebar button.suggested-action:backdrop:checked,
         headerbar button.suggested-action:disabled:hover,
         headerbar button.suggested-action:disabled:active,
@@ -2289,7 +2289,7 @@ GraniteWidgetsWelcome {
         headerbar button.suggested-action:backdrop:active,
         headerbar button.suggested-action:backdrop:checked {
           border: none;
-          background-image: linear-gradient(to right, #5797f7 0%, #00dcf4 100%); }
+          background-image: linear-gradient(to right, #3BE4EA 0%, #1A93ED 100%); }
     .titlebar button.appmenu,
     headerbar button.appmenu {
       background: transparent; }
@@ -2731,10 +2731,8 @@ list {
     border-color: rgba(91, 93, 102, 0.19); }
 
 row {
-  padding: 5px 11px;
-  transition: all 150ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-  row label {
-    padding-left: 8px; }
+  background-color: transparent;
+  border-color: rgba(238, 238, 238, 0.1); }
   row:hover {
     transition: none; }
   row:backdrop {
@@ -4576,12 +4574,11 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     padding: 2px 0 0; }
   .budgie-popover button,
   .budgie-popover.background button {
-    color: #C3C7D1;
-    border: none;
-    background: transparent; }
+    color: #C3C7D1; }
     .budgie-popover button:hover,
     .budgie-popover.background button:hover {
-      color: #00D3A7; }
+      color: #fefefe;
+      background: #212638; }
 
 .budgie-popover > .container {
   padding: 2px; }
@@ -4625,7 +4622,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
       box-shadow: inset 0 2px 2px -2px rgba(0, 0, 0, 0.2); }
     .budgie-menu .category-button:checked {
       color: #fefefe;
-      background: linear-gradient(to right, #5797f7 0%, #00dcf4 100%); }
+      background: linear-gradient(to right, #3BE4EA 0%, #1A93ED 100%); }
       .budgie-menu .category-button:checked:hover {
         color: rgba(254, 254, 254, 0.9); }
     .budgie-menu .category-button:checked:disabled {
@@ -4639,8 +4636,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 0;
-    box-shadow: none;
-    background: yellow; }
+    box-shadow: none; }
   .budgie-menu button {
     border: none;
     background: transparent; }
@@ -4817,7 +4813,7 @@ button.raven-trigger {
     color: white;
     font-weight: 700; }
   .budgie-panel.transparent {
-    background-color: rgba(3, 3, 5, 0.2); }
+    background-color: rgba(3, 3, 5, 0.4); }
     .top .budgie-panel.transparent {
       border-bottom-color: transparent; }
     .bottom .budgie-panel.transparent {
@@ -5118,7 +5114,7 @@ button.raven-trigger {
       background: #c74ded;
       color: #fefefe; }
     .raven .powerstrip button.image-button:first-child {
-      background: linear-gradient(to right, #5797f7 0%, #00dcf4 100%); }
+      background: linear-gradient(to right, #3BE4EA 0%, #1A93ED 100%); }
       .raven .powerstrip button.image-button:first-child:hover {
         background: rgba(0, 211, 167, 0.85); }
       .raven .powerstrip button.image-button:first-child:active {
@@ -5527,8 +5523,11 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
   border-radius: 0; }
   .xfce4-panel.panel {
     background-color: #222e39;
+    color: #C3C7D1;
     text-shadow: none;
     -gtk-icon-shadow: none; }
+    .xfce4-panel.panel progressbar trough {
+      background-color: rgba(255, 255, 255, 0.15); }
 
 #tasklist-button {
   color: rgba(195, 199, 209, 0.8);
@@ -5543,26 +5542,26 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
     background-color: rgba(0, 0, 0, 0.25);
     box-shadow: inset 0 -2px #00D3A7; }
 
-.xfce4-panel.panel button.flat, .mate-panel-menu-bar button:not(#tasklist-button),
+.xfce4-panel.panel button.flat:not(.open_group), .mate-panel-menu-bar button:not(#tasklist-button),
 panel-toplevel.background button:not(#tasklist-button) {
   color: #C3C7D1;
   border-radius: 0;
   border: none;
   background-color: rgba(34, 46, 57, 0); }
-  .xfce4-panel.panel button.flat:hover, .mate-panel-menu-bar button:hover:not(#tasklist-button),
+  .xfce4-panel.panel button.flat:hover:not(.open_group), .mate-panel-menu-bar button:hover:not(#tasklist-button),
   panel-toplevel.background button:hover:not(#tasklist-button) {
     border: none;
     background-color: #2f404f; }
-  .xfce4-panel.panel button.flat:active, .mate-panel-menu-bar button:active:not(#tasklist-button),
-  panel-toplevel.background button:active:not(#tasklist-button), .xfce4-panel.panel button.flat:checked, .mate-panel-menu-bar button:checked:not(#tasklist-button),
+  .xfce4-panel.panel button.flat:active:not(.open_group), .mate-panel-menu-bar button:active:not(#tasklist-button),
+  panel-toplevel.background button:active:not(#tasklist-button), .xfce4-panel.panel button.flat:checked:not(.open_group), .mate-panel-menu-bar button:checked:not(#tasklist-button),
   panel-toplevel.background button:checked:not(#tasklist-button) {
     color: #fefefe;
     background-color: #2c3b49;
     border-bottom: 2px solid #00D3A7; }
-    .xfce4-panel.panel button.flat:active label, .mate-panel-menu-bar button:active:not(#tasklist-button) label,
-    panel-toplevel.background button:active:not(#tasklist-button) label, .xfce4-panel.panel button.flat:active image, .mate-panel-menu-bar button:active:not(#tasklist-button) image,
-    panel-toplevel.background button:active:not(#tasklist-button) image, .xfce4-panel.panel button.flat:checked label, .mate-panel-menu-bar button:checked:not(#tasklist-button) label,
-    panel-toplevel.background button:checked:not(#tasklist-button) label, .xfce4-panel.panel button.flat:checked image, .mate-panel-menu-bar button:checked:not(#tasklist-button) image,
+    .xfce4-panel.panel button.flat:active:not(.open_group) label, .mate-panel-menu-bar button:active:not(#tasklist-button) label,
+    panel-toplevel.background button:active:not(#tasklist-button) label, .xfce4-panel.panel button.flat:active:not(.open_group) image, .mate-panel-menu-bar button:active:not(#tasklist-button) image,
+    panel-toplevel.background button:active:not(#tasklist-button) image, .xfce4-panel.panel button.flat:checked:not(.open_group) label, .mate-panel-menu-bar button:checked:not(#tasklist-button) label,
+    panel-toplevel.background button:checked:not(#tasklist-button) label, .xfce4-panel.panel button.flat:checked:not(.open_group) image, .mate-panel-menu-bar button:checked:not(#tasklist-button) image,
     panel-toplevel.background button:checked:not(#tasklist-button) image {
       color: inherit; }
 
@@ -5619,6 +5618,12 @@ window.thunar toolbar#location-toolbar > toolitem > widget > widget.linked.path-
 
 window.thunar toolbar#location-toolbar entry {
   border-radius: 10px; }
+
+/* Vala-appmenu-plugin*/
+.-vala-panel-appmenu-core scrolledwindow,
+.-vala-panel-appmenu-private > menuitem,
+.-vala-panel-appmenu-private > menuitem:first-child > label {
+  color: #C3C7D1; }
 
 /********
  * Gala *
@@ -5701,21 +5706,6 @@ window.thunar toolbar#location-toolbar entry {
 /*********
  * Panel *
  ********/
-.panel {
-  background-color: transparent;
-  transition: all 100ms ease-in-out; }
-  .panel.maximized {
-    background-color: #222e39; }
-  .panel.translucent {
-    background-color: rgba(34, 46, 57, 0.5); }
-  .panel.color-light.translucent {
-    background-color: rgba(195, 199, 209, 0.85); }
-
-menubar.panel,
-.panel menubar {
-  box-shadow: none;
-  border: none; }
-
 .composited-indicator > revealer,
 .composited-indicator > revealer image,
 .composited-indicator > revealer label,
@@ -6079,6 +6069,9 @@ MsdOsdWindow.background.osd {
     background-color: rgba(7, 8, 11, 0.98);
     border: none;
     border-radius: 5px; }
+
+.mate-panel-menu-bar, .mate-panel-menu-bar button {
+  border-radius: 0; }
 
 /***********************
  * App-Specific Styles *

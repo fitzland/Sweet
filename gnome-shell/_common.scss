@@ -177,13 +177,17 @@ $slider_size: 16px;
 .flashspot { background-color: white; }
 
 .modal-dialog {
-  border: 1px solid $borders_color;
+  border: 1px solid lighten($bg_color, 6%) !important;
   border-radius: 10px;
   color: $osd_fg_color;
   background-color: darken($osd_bg_color, 2%);
   box-shadow: $depth6;
 
-  .modal-dialog-content-box { padding: 24px; }
+  .modal-dialog-content-box {
+    margin: 32px 40px;
+    spacing: 32px;
+    max-width: 28em;
+  }
   .run-dialog-entry {
     width: 20em;
     margin-bottom: 6px;
@@ -381,7 +385,7 @@ $slider_size: 16px;
 
 .prompt-dialog {
   //this is the width of the entire modal popup
-  width: 34em;
+  width: 28em;
   border: none;
   border-radius: 10px;
 
@@ -1023,7 +1027,7 @@ $slider_size: 16px;
     }
 
 
-    .calendar-day-base {
+    .calendar-day-base, .calendar-day {
       font-size: 80%;
       text-align: center;
       width: 2.4em; height: 2.4em;
@@ -1041,7 +1045,7 @@ $slider_size: 16px;
         color: $selected_fg_color;
         @include gradient();
         border-color: black; //avoid jumparound due to today
-        box-shadow: none;
+        box-shadow: none !important;
       }
       &.calendar-day-heading {  //day of week heading
         color: darken($fg_color, 10%);
@@ -1137,13 +1141,13 @@ $slider_size: 16px;
 
         .message {
           &:hover,&:focus { 
-            background-color: lighten($bg_color, 4%);
+            background-color: lighten($bg_color, 6%);
             box-shadow: 2px 0px 0px 0px $g2 inset;
             border-radius: 0px 7px 7px 0px;
            }
           border: 1px solid $borders_color;
           border-radius: 7px;
-          background: lighten($bg_color, 1.5%);
+          background: lighten($bg_color, 3%);
           box-shadow: none;
         }
 
@@ -1168,9 +1172,21 @@ $slider_size: 16px;
           .message-content {
           //  color: darken($fg_color,20%);
             padding: 10px;
-            *:hover > StIcon,
-            *:focus > StIcon, {
-              color: $red;
+          }
+
+          // close button
+          .message-close-button {
+            color: $fg_color;
+            background-color: transparentize($fg_color, 0.8);
+            border-radius: 99px;
+
+            &:hover {
+              background-color: $red;
+               > StIcon { color: $selected_fg_color; }
+            }
+            &:active {
+              background-color: $red;
+              > StIcon { color: $selected_fg_color; }
             }
           }
 
